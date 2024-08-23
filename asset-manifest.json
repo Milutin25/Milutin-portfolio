@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/milutin-portfolio/static/css/main.1f11aae3.css",
+    "main.js": "/milutin-portfolio/static/js/main.3f92ea7a.js",
+    "static/js/198.966997cd.chunk.js": "/milutin-portfolio/static/js/198.966997cd.chunk.js",
+    "static/js/453.1611b823.chunk.js": "/milutin-portfolio/static/js/453.1611b823.chunk.js",
+    "static/media/fitness.png": "/milutin-portfolio/static/media/fitness.4f4646a16087fa95b99e.png",
+    "static/media/bookapp.png": "/milutin-portfolio/static/media/bookapp.c7f0e076acc0709edb2e.png",
+    "static/media/unnamed.png": "/milutin-portfolio/static/media/unnamed.38e840a7fa4f86305e36.png",
+    "static/media/recipes.png": "/milutin-portfolio/static/media/recipes.b0f523517dcd417b7755.png",
+    "static/media/zika.jpg": "/milutin-portfolio/static/media/zika.bd184656e43c9ad01b47.jpg",
+    "static/media/slavo.jpg": "/milutin-portfolio/static/media/slavo.ba4a826faad6cca16db8.jpg",
+    "static/media/natasa.jpg": "/milutin-portfolio/static/media/natasa.d667276d820da74edbff.jpg",
+    "static/media/call.svg": "/milutin-portfolio/static/media/call.c6e041df2b89e14e59dfc74e5cc783ff.svg",
+    "static/media/contact.svg": "/milutin-portfolio/static/media/contact.e780d4de52afc7829d09c1096fad9782.svg",
+    "static/media/web.svg": "/milutin-portfolio/static/media/web.456d3cf6593807b54fc937194c45e833.svg",
+    "static/media/mail-2.svg": "/milutin-portfolio/static/media/mail-2.d2e5877e4fbc6d1c8adf0a119fe602a2.svg",
+    "static/media/twitter.svg": "/milutin-portfolio/static/media/twitter.536733a8f1974014b3d692775d3069fd.svg",
+    "static/media/instagram.svg": "/milutin-portfolio/static/media/instagram.7b9599c2a543d37502bc756157ba0fef.svg",
+    "index.html": "/milutin-portfolio/index.html",
+    "static/media/social.svg": "/milutin-portfolio/static/media/social.4270c4bf22a99e0abd51bdb180f28499.svg",
+    "static/media/tik-tok.svg": "/milutin-portfolio/static/media/tik-tok.da20ff5f5a85dfed208ce2a453d333c8.svg",
+    "static/media/facebook.svg": "/milutin-portfolio/static/media/facebook.1e4e4ffa2320053f88fc75c88d792452.svg",
+    "main.1f11aae3.css.map": "/milutin-portfolio/static/css/main.1f11aae3.css.map",
+    "main.3f92ea7a.js.map": "/milutin-portfolio/static/js/main.3f92ea7a.js.map",
+    "198.966997cd.chunk.js.map": "/milutin-portfolio/static/js/198.966997cd.chunk.js.map",
+    "453.1611b823.chunk.js.map": "/milutin-portfolio/static/js/453.1611b823.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f11aae3.css",
+    "static/js/main.3f92ea7a.js"
+  ]
+}
