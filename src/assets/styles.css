@@ -19,6 +19,65 @@
 /*	01) KIOTO BASE
 /*---------------------------------------------------*/
 
+.details {
+	position: relative;
+	padding: 20px;
+	background-color: #f0f0f0;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hover-text {
+	position: absolute;
+	top: 60px; /* Adjust vertical positioning */
+	left: 50%;
+	transform: translateX(-50%) scale(0); /* Start as a dot */
+	opacity: 0;
+	background-color: #fff;
+	width: 400px; /* Final width */
+	height: 500px; /* Adjusted height */
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	text-align: left; /* Align text to the left */
+	overflow: auto; /* Enable scrollbar if content overflows */
+	display: flex; /* Flexbox for centering */
+	align-items: center; /* Center vertically */
+	justify-content: center; /* Center horizontally */
+	transition: opacity 0.5s ease, transform 0.8s ease; /* Smooth transition */
+  }
+  
+  .details:hover .hover-text {
+	opacity: 1;
+	transform: translateX(-50%) scale(1); /* Expand to full size */
+  }
+  
+  .hidden {
+	opacity: 0;
+	transform: translateX(-50%) scale(0); /* Return to dot size */
+  }
+  
+  .description {
+	font-size: 16px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+	line-height: 1.4;
+	max-width: 100%; /* Ensure text fits within the div */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 .kioto_tm_service{
 	width: 100%;
@@ -1350,7 +1409,9 @@ a{
 	text-align: center;
 }
 .kioto_tm_contact .info_list > ul > li span{
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .kioto_tm_contact .info_list > ul > li{
 	display: block;

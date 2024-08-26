@@ -1,6 +1,6 @@
 import { LeftPart } from "../home";
 import { Progress } from "../../assets/progressbar";
-import { FC } from "react";
+import { FC, useState } from "react";
 import slavoImage from "../../assets/images/slavo.jpg";
 import natasaImage from "../../assets/images/natasa.jpg";
 import zikaImage from "../../assets/images/zika.jpg";
@@ -11,6 +11,9 @@ import tiktokImage from "../../assets/images/tik-tok.svg";
 import { DownloadButton} from "./button";
 
 export const About: FC = () => {
+
+  const [hidden, setHidden] = useState(true);
+
   return (
     <>
       <LeftPart />
@@ -247,53 +250,39 @@ export const About: FC = () => {
                     <div className="list_inner">
                       <div className="abs_image">
                         <img src={slavoImage} alt="Slavo Popovic" />
-                        <div
-                          className="main"
-                          data-img-url="img/portfolio/3.jpg"
-                        ></div>
+                        <div className="main" data-img-url="img/portfolio/3.jpg"></div>
                       </div>
-                      <div className="details">
+                      <div
+                        className="details"
+                        onMouseEnter={() => setHidden(false)}
+                        onMouseLeave={() => setHidden(true)}
+                      >
                         <h3 className="name">Slavo Popovic</h3>
                         <span className="job">Software Developer</span>
                         <div className="kioto_tm_social">
                           <ul>
                             <li>
-                              <a href="#">
-                                <img
-                                  className="svg"
-                                  src={tiktokImage}
-                                  alt="Tik-tok"
-                                />
-                              </a>
+                              <a href="#"><img className="svg" src={tiktokImage} alt="Tik-tok" /></a>
                             </li>
                             <li>
-                              <a href="#">
-                                <img
-                                  className="svg"
-                                  src={twitterImage}
-                                  alt="Twitter"
-                                />
-                              </a>
+                              <a href="#"><img className="svg" src={twitterImage} alt="Twitter" /></a>
                             </li>
                             <li>
                               <a href="https://www.facebook.com/share/StB7JEqVEyCTHuMG/?mibextid=LQQJ4d">
-                                <img
-                                  className="svg"
-                                  src={facebookImage}
-                                  alt="Facebook"
-                                />
+                                <img className="svg" src={facebookImage} alt="Facebook" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.instagram.com/slavo_3?igsh=a2xzdDVyd3pnaDZw">
-                                <img
-                                  className="svg"
-                                  src={instagramImage}
-                                  alt="Instagram"
-                                />
+                                <img className="svg" src={instagramImage} alt="Instagram" />
                               </a>
                             </li>
                           </ul>
+                        </div>
+                        <div className={`hover-text ${hidden ? 'hidden' : ''}`}>
+                          <p className="description">
+                          Slavo Popovic is a seasoned senior software developer with an impressive track record of leading and contributing to major projects. He has played pivotal roles in high-profile developments, including significant contributions to The Weather Channel. As the founder of Prototype.NEXT, Slavo has leveraged his extensive expertise to foster innovation and drive technological advancements. His visionary approach and commitment to excellence have made a substantial impact on the software industry. Slavo's ability to navigate complex challenges and deliver high-quality solutions consistently sets him apart. His leadership and technical skills not only inspire his team but also pave the way for future breakthroughs in software development. His dedication to mentoring emerging talents and his proactive approach in adopting cutting-edge technologies continue to drive the evolution of the software industry.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -302,53 +291,39 @@ export const About: FC = () => {
                     <div className="list_inner">
                       <div className="abs_image">
                         <img src={zikaImage} alt="Marko Zivkovic" />
-                        <div
-                          className="main"
-                          data-img-url="img/portfolio/3.jpg"
-                        ></div>
+                        <div className="main" data-img-url="img/portfolio/3.jpg"></div>
                       </div>
-                      <div className="details">
+                      <div
+                        className="details"
+                        onMouseEnter={() => setHidden(false)}
+                        onMouseLeave={() => setHidden(true)}
+                      >
                         <h3 className="name">Marko Zivkovic</h3>
                         <span className="job">Software Developer</span>
                         <div className="kioto_tm_social">
                           <ul>
                             <li>
-                              <a href="#">
-                                <img
-                                  className="svg"
-                                  src={tiktokImage}
-                                  alt="Tik-tok"
-                                />
-                              </a>
+                              <a href="#"><img className="svg" src={tiktokImage} alt="Tik-tok" /></a>
                             </li>
                             <li>
-                              <a href="#">
-                                <img
-                                  className="svg"
-                                  src={twitterImage}
-                                  alt="Twitter"
-                                />
-                              </a>
+                              <a href="#"><img className="svg" src={twitterImage} alt="Twitter" /></a>
                             </li>
                             <li>
                               <a href="https://www.facebook.com/share/MjLSFpjszLZ8oaHv/?mibextid=LQQJ4d">
-                                <img
-                                  className="svg"
-                                  src={facebookImage}
-                                  alt="Facebook"
-                                />
+                                <img className="svg" src={facebookImage} alt="Facebook" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.instagram.com/markozivkovic1982?igsh=MWN5a21hbGl1b3BzNw==">
-                                <img
-                                  className="svg"
-                                  src={instagramImage}
-                                  alt="Instagram"
-                                />
+                                <img className="svg" src={instagramImage} alt="Instagram" />
                               </a>
                             </li>
                           </ul>
+                        </div>
+                        <div className={`hover-text ${hidden ? 'hidden' : ''}`}>
+                          <p className="description">
+                          Marko Zivkovic is a dedicated mid-level software developer with a strong track record of contributing to a variety of projects. He gained particular recognition for his efficiency during the challenging Covid-19 period, where his work for the Serbian government played a crucial role in supporting critical systems and infrastructure. Beyond this, Marko has also been an integral part of Prototype.NEXT, where his skills and innovative approach continue to drive forward-thinking solutions. His ability to adapt and excel in fast-paced environments makes him a valuable asset to any development team. Additionally, Marko's collaborative spirit and commitment to continuous learning have consistently driven successful project outcomes. His contributions have not only improved operational efficiency but also enhanced team cohesion and project execution
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -357,53 +332,39 @@ export const About: FC = () => {
                     <div className="list_inner">
                       <div className="abs_image">
                         <img src={natasaImage} alt="Natasa Stefanovic" />
-                        <div
-                          className="main"
-                          data-img-url="img/portfolio/3.jpg"
-                        ></div>
+                        <div className="main" data-img-url="img/portfolio/3.jpg"></div>
                       </div>
-                      <div className="details">
+                      <div
+                        className="details"
+                        onMouseEnter={() => setHidden(false)}
+                        onMouseLeave={() => setHidden(true)}
+                      >
                         <h3 className="name">Natasa Stefanovic</h3>
                         <span className="job">Software Developer</span>
                         <div className="kioto_tm_social">
                           <ul>
                             <li>
-                              <a href="#">
-                                <img
-                                  className="svg"
-                                  src={tiktokImage}
-                                  alt="Tik-tok"
-                                />
-                              </a>
+                              <a href="#"><img className="svg" src={tiktokImage} alt="Tik-tok" /></a>
                             </li>
                             <li>
-                              <a href="#">
-                                <img
-                                  className="svg"
-                                  src={twitterImage}
-                                  alt="Twitter"
-                                />
-                              </a>
+                              <a href="#"><img className="svg" src={twitterImage} alt="Twitter" /></a>
                             </li>
                             <li>
                               <a href="https://www.facebook.com/share/6E2BAACqnYahYkYk/?mibextid=LQQJ4d">
-                                <img
-                                  className="svg"
-                                  src={facebookImage}
-                                  alt="Facebook"
-                                />
+                                <img className="svg" src={facebookImage} alt="Facebook" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.instagram.com/natalystefanovic?igsh=NzJ2YWZrMWEwdzY1">
-                                <img
-                                  className="svg"
-                                  src={instagramImage}
-                                  alt="Instagram"
-                                />
+                                <img className="svg" src={instagramImage} alt="Instagram" />
                               </a>
                             </li>
                           </ul>
+                        </div>
+                        <div className={`hover-text ${hidden ? 'hidden' : ''}`}>
+                          <p className="description">
+                          Natasa Stefanovic is a distinguished software developer known for her exceptional contributions to the tech industry. With extensive experience in capital projects across Europe, Natasa has demonstrated a remarkable ability to deliver complex solutions under demanding conditions. Her career spans several high-profile projects, where she has consistently exceeded expectations and brought innovative ideas to the table.In addition to her work on capital projects, Natasa has dedicated a significant portion of her career to working with non-profit organizations. Her commitment to social impact and community service is evident through her involvement in various initiatives aimed at leveraging technology for positive change. By collaborating with these organizations, she has helped develop solutions that address critical social issues, improve accessibility, and promote sustainable development.
+                          </p>
                         </div>
                       </div>
                     </div>
