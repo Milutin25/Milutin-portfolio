@@ -1,4 +1,4 @@
-import { FormEvent, useState, FC } from "react";
+import { FormEvent, useState, FC, ChangeEvent } from "react";
 import { LeftPart } from "../home";
 import { supabase } from "../config/supabaseClient";
 import locationImage from "../../assets/images/contact.svg";
@@ -12,7 +12,7 @@ import socialImage from "../../assets/images/social.svg";
 export const Contact: FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [phone, setPhone] = useState<string>("");
+  const [phone, setPhone] = useState<number | "">("");
   const [message, setMessage] = useState<string>("");
   const [errorMessage, setError] = useState<string | null>(null);
   const [successMessage, setSuccess] = useState<string | null>(null);
@@ -22,6 +22,11 @@ export const Contact: FC = () => {
     phone: false,
     message: false,
   });
+
+  const updatePhone = (e: ChangeEvent<HTMLInputElement>): void => {
+    const value = e.target.value;
+    setPhone(value === '' ? '' : Number(value));
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -53,7 +58,7 @@ export const Contact: FC = () => {
       if (error) {
         console.error("Error:", error);
         setError(
-          "Please try again, there was an issue with sending data to the server."
+          "Please fill all the fields correctly."
         );
         setSuccess(null);
       } else {
@@ -207,14 +212,14 @@ export const Contact: FC = () => {
                   </li>
                   <li>
                     <input
-                      type="text"
+                      type="number"
                       placeholder="Phone"
                       name="contact_phone"
                       className={`cf-form-control ${
                         formErrors.phone ? "error" : ""
                       }`}
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      value={phone === '' ? '' : phone}
+                      onChange={updatePhone}
                       style={{ borderColor: formErrors.phone ? "red" : "" }}
                     />
                     <span></span>

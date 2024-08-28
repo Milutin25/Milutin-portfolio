@@ -29,32 +29,32 @@
   
   .hover-text {
 	position: absolute;
-	top: 60px; /* Adjust vertical positioning */
+	top: 60px; 
 	left: 50%;
-	transform: translateX(-50%) scale(0); /* Start as a dot */
+	transform: translateX(-50%) scale(0); 
 	opacity: 0;
 	background-color: #fff;
-	width: 400px; /* Final width */
-	height: 500px; /* Adjusted height */
+	width: 400px; 
+	height: 500px; 
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	text-align: left; /* Align text to the left */
-	overflow: auto; /* Enable scrollbar if content overflows */
-	display: flex; /* Flexbox for centering */
-	align-items: center; /* Center vertically */
-	justify-content: center; /* Center horizontally */
-	transition: opacity 0.5s ease, transform 0.8s ease; /* Smooth transition */
+	text-align: left; 
+	overflow: auto; 
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	transition: opacity 0.5s ease, transform 0.8s ease; 
   }
   
   .details:hover .hover-text {
 	opacity: 1;
-	transform: translateX(-50%) scale(1); /* Expand to full size */
+	transform: translateX(-50%) scale(1);
   }
   
   .hidden {
 	opacity: 0;
-	transform: translateX(-50%) scale(0); /* Return to dot size */
+	transform: translateX(-50%) scale(0);
   }
   
   .description {
@@ -63,7 +63,7 @@
 	font-weight: 500;
 	margin: 0;
 	line-height: 1.4;
-	max-width: 100%; /* Ensure text fits within the div */
+	max-width: 100%; 
   }
   
 
