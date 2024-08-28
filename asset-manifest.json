@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/milutin-portfolio/static/css/main.d50098bb.css",
-    "main.js": "/milutin-portfolio/static/js/main.c7831a2d.js",
+    "main.js": "/milutin-portfolio/static/js/main.a45d8115.js",
     "static/js/198.966997cd.chunk.js": "/milutin-portfolio/static/js/198.966997cd.chunk.js",
     "static/js/453.1611b823.chunk.js": "/milutin-portfolio/static/js/453.1611b823.chunk.js",
     "static/media/fitness.png": "/milutin-portfolio/static/media/fitness.4f4646a16087fa95b99e.png",
@@ -22,12 +22,12 @@
     "static/media/tik-tok.svg": "/milutin-portfolio/static/media/tik-tok.da20ff5f5a85dfed208ce2a453d333c8.svg",
     "static/media/facebook.svg": "/milutin-portfolio/static/media/facebook.1e4e4ffa2320053f88fc75c88d792452.svg",
     "main.d50098bb.css.map": "/milutin-portfolio/static/css/main.d50098bb.css.map",
-    "main.c7831a2d.js.map": "/milutin-portfolio/static/js/main.c7831a2d.js.map",
+    "main.a45d8115.js.map": "/milutin-portfolio/static/js/main.a45d8115.js.map",
     "198.966997cd.chunk.js.map": "/milutin-portfolio/static/js/198.966997cd.chunk.js.map",
     "453.1611b823.chunk.js.map": "/milutin-portfolio/static/js/453.1611b823.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d50098bb.css",
-    "static/js/main.c7831a2d.js"
+    "static/js/main.a45d8115.js"
   ]
 }
