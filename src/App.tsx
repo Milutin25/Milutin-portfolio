@@ -1,13 +1,13 @@
 import { useState, useEffect, FC } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './assets/styles.css'; 
-import  { MobileMenu }  from "./components/mobilemenu";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import "./assets/styles.css";
+import { MobileMenu } from "./components/mobilemenu";
 import Cursor from "./components/cursor";
 import { About } from "./components/about";
-import  Home from "./components/home";
+import Home from "./components/home";
 import { Contact } from "./components/contact";
-import  RecentWork  from "./components/recentwork";
-import Blog from "./components/blog"
+import RecentWork from "./components/recentwork";
+import Blog from "./components/blog";
 
 export const App: FC = () => {
   const [loading, setLoading] = useState(true);
@@ -15,7 +15,7 @@ export const App: FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); 
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
