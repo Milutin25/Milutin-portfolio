@@ -5,9 +5,9 @@ import { MobileMenu } from "./components/mobilemenu";
 import Cursor from "./components/cursor";
 import { About } from "./components/about";
 import Home from "./components/home";
-import { Contact } from "./components/contact";
+import { ContactPage } from "./components/contact";
 import RecentWork from "./components/recentwork";
-import Blog from "./components/blog";
+import { Blog } from "./components/blog";
 
 export const App: FC = () => {
   const [loading, setLoading] = useState(true);
@@ -47,7 +47,7 @@ export const App: FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/recentwork" element={<RecentWork />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>

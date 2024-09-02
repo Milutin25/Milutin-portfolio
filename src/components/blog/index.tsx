@@ -1,6 +1,6 @@
 import { useEffect, useState, FC } from 'react';
 import { LeftPart } from '../home';
-import blogImage from "../../assets/images/web.svg";
+
 
 
 interface Post {
@@ -9,8 +9,19 @@ interface Post {
   cover_image: string;
   url: string;
 }
+const PostThumbnail: FC <{post : Post}>  = ({post}) => {
+    return(
+      <div className="kioto_tm_service">
+          <a href={post.url} target="_blank" rel="noopener noreferrer">
+            <p>{post.title}</p>
+            <img src={post.cover_image} alt={post.title}/>
+          </a>
+        </div>
+    )
+}
 
-const Blog: FC = () => {
+
+export const Blog: FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,7 +37,7 @@ const Blog: FC = () => {
         setLoading(false);
       } catch (error) {
         setError("Failed to fetch posts.");
-        setLoading(false);
+
       }
     };
 
@@ -47,19 +58,9 @@ const Blog: FC = () => {
             <span>// My Blogs</span>
           </div>
           <div className="services_list">
-            <ul>
-              {posts.map(post => (
-                <li key={post.id}>
-                  <div className="list_inner">
-                    <img className="svg" src={blogImage} alt="" />
-                    <h3 className="title">Check out my latest blog posts</h3>
-                    <a href={post.url} target="_blank" rel="noopener noreferrer">
-                      {post.title}
-                    </a>
-                  </div>
-                </li>
+              {posts.map((post) => (
+                    <PostThumbnail post={post} />
               ))}
-            </ul>
           </div>
         </div>
       </div>
@@ -67,4 +68,3 @@ const Blog: FC = () => {
   );
 }
 
-export default Blog;

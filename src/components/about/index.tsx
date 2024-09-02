@@ -281,7 +281,16 @@ export const About: FC = () => {
                         </div>
                         <div className={`hover-text ${hidden ? 'hidden' : ''}`}>
                           <p className="description">
-                          Slavo Popovic is a seasoned senior software developer with an impressive track record of leading and contributing to major projects. He has played pivotal roles in high-profile developments, including significant contributions to The Weather Channel. As the founder of Prototype.NEXT, Slavo has leveraged his extensive expertise to foster innovation and drive technological advancements. His visionary approach and commitment to excellence have made a substantial impact on the software industry. Slavo's ability to navigate complex challenges and deliver high-quality solutions consistently sets him apart. His leadership and technical skills not only inspire his team but also pave the way for future breakthroughs in software development. His dedication to mentoring emerging talents and his proactive approach in adopting cutting-edge technologies continue to drive the evolution of the software industry.
+                          Slavo Popovic is a seasoned senior software developer with an impressive track record of leading and 
+                          contributing to major projects. He has played pivotal roles in high-profile developments, including 
+                          significant contributions to The Weather Channel. As the founder of Prototype.NEXT, Slavo has leveraged 
+                          his extensive expertise to foster innovation and drive technological advancements. His visionary 
+                          approach and commitment to excellence have made a substantial impact on the software industry. Slavo's 
+                          ability to navigate complex challenges and deliver high-quality solutions consistently sets him apart. 
+                          His leadership and technical skills not only inspire his team but also pave the way for future 
+                          breakthroughs in software development. His dedication to mentoring emerging talents and his proactive
+                          approach in adopting cutting-edge technologies continue to drive the evolution of the software 
+                          industry.
                           </p>
                         </div>
                       </div>
@@ -322,7 +331,15 @@ export const About: FC = () => {
                         </div>
                         <div className={`hover-text ${hidden ? 'hidden' : ''}`}>
                           <p className="description">
-                          Marko Zivkovic is a dedicated mid-level software developer with a strong track record of contributing to a variety of projects. He gained particular recognition for his efficiency during the challenging Covid-19 period, where his work for the Serbian government played a crucial role in supporting critical systems and infrastructure. Beyond this, Marko has also been an integral part of Prototype.NEXT, where his skills and innovative approach continue to drive forward-thinking solutions. His ability to adapt and excel in fast-paced environments makes him a valuable asset to any development team. Additionally, Marko's collaborative spirit and commitment to continuous learning have consistently driven successful project outcomes. His contributions have not only improved operational efficiency but also enhanced team cohesion and project execution
+                          Marko Zivkovic is a dedicated mid-level software developer with a strong track record of contributing to
+                          a variety of projects. He gained particular recognition for his efficiency during the challenging 
+                          Covid-19 period, where his work for the Serbian government played a crucial role in supporting critical
+                          systems and infrastructure. Beyond this, Marko has also been an integral part of Prototype.NEXT, where 
+                          his skills and innovative approach continue to drive forward-thinking solutions. His ability to adapt
+                          and excel in fast-paced environments makes him a valuable asset to any development team. Additionally,
+                          Marko's collaborative spirit and commitment to continuous learning have consistently driven
+                          successful project outcomes. His contributions have not only improved operational efficiency but 
+                          also enhanced team cohesion and project execution.
                           </p>
                         </div>
                       </div>
@@ -363,7 +380,16 @@ export const About: FC = () => {
                         </div>
                         <div className={`hover-text ${hidden ? 'hidden' : ''}`}>
                           <p className="description">
-                          Natasa Stefanovic is a distinguished software developer known for her exceptional contributions to the tech industry. With extensive experience in capital projects across Europe, Natasa has demonstrated a remarkable ability to deliver complex solutions under demanding conditions. Her career spans several high-profile projects, where she has consistently exceeded expectations and brought innovative ideas to the table.In addition to her work on capital projects, Natasa has dedicated a significant portion of her career to working with non-profit organizations. Her commitment to social impact and community service is evident through her involvement in various initiatives aimed at leveraging technology for positive change. By collaborating with these organizations, she has helped develop solutions that address critical social issues, improve accessibility, and promote sustainable development.
+                          Natasa Stefanovic is a distinguished software developer known for her exceptional contributions 
+                          to the tech industry. With extensive experience in capital projects across Europe, Natasa has 
+                          demonstrated a remarkable ability to deliver complex solutions under demanding conditions. Her
+                          career spans several high-profile projects, where she has consistently exceeded expectations and 
+                          brought innovative ideas to the table.In addition to her work on capital projects, Natasa has dedicated
+                          a significant portion of her career to working with non-profit organizations. Her commitment to social
+                          impact and community service is evident through her involvement in various initiatives aimed at 
+                          leveraging technology for positive change. By collaborating with these organizations, she has helped 
+                          develop solutions that address critical social issues, improve accessibility, and promote sustainable
+                          development.
                           </p>
                         </div>
                       </div>

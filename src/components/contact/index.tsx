@@ -1,6 +1,7 @@
 import { FormEvent, useState, FC, ChangeEvent } from "react";
 import { LeftPart } from "../home";
 import { supabase } from "../config/supabaseClient";
+import { Input } from "./inputs";
 import locationImage from "../../assets/images/contact.svg";
 import callImage from "../../assets/images/call.svg";
 import emailImage from "../../assets/images/mail-2.svg";
@@ -9,10 +10,10 @@ import instagramImage from "../../assets/images/instagram.svg";
 import facebookImage from "../../assets/images/facebook.svg";
 import socialImage from "../../assets/images/social.svg";
 
-export const Contact: FC = () => {
+export const ContactPage: FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [phone, setPhone] = useState<number | "">("");
+  const [phone, setPhone] = useState<string>(""); 
   const [message, setMessage] = useState<string>("");
   const [errorMessage, setError] = useState<string | null>(null);
   const [successMessage, setSuccess] = useState<string | null>(null);
@@ -23,10 +24,30 @@ export const Contact: FC = () => {
     message: false,
   });
 
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const disabled = name && email && phone && message; 
+
+  const updateName = (e: ChangeEvent<HTMLInputElement>): void => {
+    const usersName = e.target.value;
+    setName(usersName);
+  };
+
+  const updateEmail = (e: ChangeEvent<HTMLInputElement>): void => {
+    const usersEmail = e.target.value;
+    setEmail(usersEmail);
+  };
+
   const updatePhone = (e: ChangeEvent<HTMLInputElement>): void => {
-    const value = e.target.value;
-    setPhone(value === '' ? '' : Number(value));
-  }
+    const usersPhone = e.target.value;
+    if (usersPhone === "" || !isNaN(Number(usersPhone))) {
+      setPhone(usersPhone); 
+    }
+  };
+
+  const updateMessage = (e: ChangeEvent<HTMLTextAreaElement>): void => {
+    const usersMessage = e.target.value;
+    setMessage(usersMessage);
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,13 +78,12 @@ export const Contact: FC = () => {
 
       if (error) {
         console.error("Error:", error);
-        setError(
-          "Please fill all the fields correctly."
-        );
+        setError("Please fill all the fields correctly.");
         setSuccess(null);
       } else {
+        setIsSubmitted(true);
         console.log("Data:", data);
-        setSuccess("Your message has been sent successfully!");
+        setSuccess("Thanks for reaching out. Your message has been sent successfully!");
         setError(null);
         setName("");
         setEmail("");
@@ -86,7 +106,6 @@ export const Contact: FC = () => {
   return (
     <>
       <LeftPart />
-
       <div id="contact" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_contact">
@@ -180,73 +199,75 @@ export const Contact: FC = () => {
             </div>
 
             <div className="form_wrapper">
-              <form id="contactForm" onSubmit={handleSubmit}>
-                <ul>
-                  <li>
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      name="contact_name"
-                      className={`cf-form-control ${
-                        formErrors.name ? "error" : ""
-                      }`}
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      style={{ borderColor: formErrors.name ? "red" : "" }}
-                    />
-                    <span></span>
-                  </li>
-                  <li>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      name="contact_email"
-                      className={`cf-form-control ${
-                        formErrors.email ? "error" : ""
-                      }`}
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      style={{ borderColor: formErrors.email ? "red" : "" }}
-                    />
-                    <span></span>
-                  </li>
-                  <li>
-                    <input
-                      type="number"
-                      placeholder="Phone"
-                      name="contact_phone"
-                      className={`cf-form-control ${
-                        formErrors.phone ? "error" : ""
-                      }`}
-                      value={phone === '' ? '' : phone}
-                      onChange={updatePhone}
-                      style={{ borderColor: formErrors.phone ? "red" : "" }}
-                    />
-                    <span></span>
-                  </li>
-                  <li id="text-area-w">
-                    <textarea
-                      placeholder="Message"
-                      name="contact_message"
-                      className={`cf-form-control ${
-                        formErrors.message ? "error" : ""
-                      }`}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      style={{ borderColor: formErrors.message ? "red" : "" }}
-                    ></textarea>
-                  </li>
-                </ul>
-                <div className="kioto_tm_button">
-                  <button
-                    type="submit"
-                    id="send_message"
-                    className="tm_text_effect"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              {!isSubmitted && (
+                <form id="contactForm" onSubmit={handleSubmit}>
+                  <ul>
+                    <li>
+                      <Input
+                        type="text"
+                        placeholder="Name"
+                        name="contact_name"
+                        className={`cf-form-control ${
+                          formErrors.name ? "error" : ""
+                        }`}
+                        value={name}
+                        onChange={updateName}
+                        style={{ borderColor: formErrors.name ? "red" : "" }}
+                      />
+                      <span></span>
+                    </li>
+                    <li>
+                      <Input
+                        type="email"
+                        placeholder="Email"
+                        name="contact_email"
+                        className={`cf-form-control ${
+                          formErrors.email ? "error" : ""
+                        }`}
+                        value={email}
+                        onChange={updateEmail}
+                        style={{ borderColor: formErrors.email ? "red" : "" }}
+                      />
+                      <span></span>
+                    </li>
+                    <li>
+                      <Input
+                        type="number"
+                        placeholder="Phone"
+                        name="contact_phone"
+                        className={`cf-form-control ${
+                          formErrors.phone ? "error" : ""
+                        }`}
+                        value={phone}
+                        onChange={updatePhone}
+                        style={{ borderColor: formErrors.phone ? "red" : "" }}
+                      />
+                      <span></span>
+                    </li>
+                    <li id="text-area-w">
+                      <textarea
+                        placeholder="Message"
+                        name="contact_message"
+                        className={`cf-form-control ${
+                          formErrors.message ? "error" : ""
+                        }`}
+                        value={message}
+                        onChange={updateMessage}
+                        style={{ borderColor: formErrors.message ? "red" : "" }}
+                      ></textarea>
+                    </li>
+                  </ul>
+                  <div className="kioto_tm_button">
+                    <button
+                      type="submit"
+                      id="send_message"
+                      className="tm_text_effect"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              )}
               {errorMessage && <p className="error-message">{errorMessage}</p>}
               {successMessage && (
                 <p className="success-message">{successMessage}</p>
