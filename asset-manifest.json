@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/milutin-portfolio/static/css/main.d50098bb.css",
-    "main.js": "/milutin-portfolio/static/js/main.a45d8115.js",
+    "main.css": "/milutin-portfolio/static/css/main.d07c58df.css",
+    "main.js": "/milutin-portfolio/static/js/main.8be5e993.js",
     "static/js/198.966997cd.chunk.js": "/milutin-portfolio/static/js/198.966997cd.chunk.js",
     "static/js/453.1611b823.chunk.js": "/milutin-portfolio/static/js/453.1611b823.chunk.js",
     "static/media/fitness.png": "/milutin-portfolio/static/media/fitness.4f4646a16087fa95b99e.png",
@@ -13,7 +13,6 @@
     "static/media/natasa.jpg": "/milutin-portfolio/static/media/natasa.d667276d820da74edbff.jpg",
     "static/media/call.svg": "/milutin-portfolio/static/media/call.c6e041df2b89e14e59dfc74e5cc783ff.svg",
     "static/media/contact.svg": "/milutin-portfolio/static/media/contact.e780d4de52afc7829d09c1096fad9782.svg",
-    "static/media/web.svg": "/milutin-portfolio/static/media/web.456d3cf6593807b54fc937194c45e833.svg",
     "static/media/mail-2.svg": "/milutin-portfolio/static/media/mail-2.d2e5877e4fbc6d1c8adf0a119fe602a2.svg",
     "static/media/twitter.svg": "/milutin-portfolio/static/media/twitter.536733a8f1974014b3d692775d3069fd.svg",
     "static/media/instagram.svg": "/milutin-portfolio/static/media/instagram.7b9599c2a543d37502bc756157ba0fef.svg",
@@ -21,13 +20,13 @@
     "static/media/social.svg": "/milutin-portfolio/static/media/social.4270c4bf22a99e0abd51bdb180f28499.svg",
     "static/media/tik-tok.svg": "/milutin-portfolio/static/media/tik-tok.da20ff5f5a85dfed208ce2a453d333c8.svg",
     "static/media/facebook.svg": "/milutin-portfolio/static/media/facebook.1e4e4ffa2320053f88fc75c88d792452.svg",
-    "main.d50098bb.css.map": "/milutin-portfolio/static/css/main.d50098bb.css.map",
-    "main.a45d8115.js.map": "/milutin-portfolio/static/js/main.a45d8115.js.map",
+    "main.d07c58df.css.map": "/milutin-portfolio/static/css/main.d07c58df.css.map",
+    "main.8be5e993.js.map": "/milutin-portfolio/static/js/main.8be5e993.js.map",
     "198.966997cd.chunk.js.map": "/milutin-portfolio/static/js/198.966997cd.chunk.js.map",
     "453.1611b823.chunk.js.map": "/milutin-portfolio/static/js/453.1611b823.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d50098bb.css",
-    "static/js/main.a45d8115.js"
+    "static/css/main.d07c58df.css",
+    "static/js/main.8be5e993.js"
   ]
 }
